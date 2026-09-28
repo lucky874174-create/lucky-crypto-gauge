@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Crypto Dashboard</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #131722;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, "Trebuchet MS", Roboto, Ubuntu, sans-serif;
+        }
+        .dashboard-container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+        .widget-box {
+            flex: 1;
+            height: 100%;
+            border: 1px solid #2a2e39;
+            box-sizing: border-box;
+        }
+        @media (max-width: 768px) {
+            .dashboard-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- बाएँ तरफ़: लाइव बिटकॉइन चार्ट -->
+        <div class="widget-box">
+            <iframe src="https://tradingview.com" 
+                    width="100%" height="100%" frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen></iframe>
+        </div>
+        
+        <!-- दाएँ तरफ़: लाइव सुई वाला स्पीडोमीटर -->
+        <div class="widget-box">
+            <iframe src="https://tradingview.com" 
+                    width="100%" height="100%" frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen></iframe>
+        </div>
+    </div>
+
+</body>
+</html>
